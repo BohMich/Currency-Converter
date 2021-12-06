@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rates_view_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    android:clickable="true"
+    android:elevation="@dimen/rates_view_elevation"
+    android:focusable="false">
+
+    <RelativeLayout
+        android:id="@+id/spacing_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rates_view_elevation"
+        android:alpha="0.7"
+        android:background="@color/colorBackgroundAlternative"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rates_view"
+        android:layout_width="match_parent"
+        android:layout_height="571dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/spacing_top">
+
+        <LinearLayout
+            android:id="@+id/rates_view_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/rates_table_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/rates_view_base_header_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/rates_table_padding"
+                android:paddingRight="@dimen/rates_table_padding"
+                android:textSize="@dimen/rates_table_header" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="@dimen/rates_table_padding" />
+
+            <TextView
+                android:id="@+id/rates_view_base_header_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/rates_table_padding"
+                android:textSize="@dimen/rates_table_header" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/rates_table_nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:fillViewport="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rates_view_header">
+
+            <LinearLayout
+                android:id="@+id/rates_table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/rates_table_column_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/rates_table_padding">
+
+                    <TextView
+                        android:id="@+id/rates_table_column_date_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="@dimen/rates_table_header" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rates_table_column_cur1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/rates_table_padding">
+
+                    <TextView
+                        android:id="@+id/rates_table_column_cur1_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="@dimen/rates_table_header" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rates_table_column_cur2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity=""
+                    android:orientation="vertical"
+                    android:padding="@dimen/rates_table_padding">
+
+                    <TextView
+                        android:id="@+id/rates_table_column_cur2_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="@dimen/rates_table_header" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ProgressBar
+        android:id="@+id/fragmentProgressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/spacing_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/rates_view_elevation"
+        android:alpha="0.7"
+        android:background="@color/colorBackgroundAlternative"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

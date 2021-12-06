@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="list_item_margin_horizontal">20dp</dimen>
+    <dimen name="list_item_margin_vertical">10dp</dimen>
+    <dimen name="rates_view_elevation">80dp</dimen>
+    <dimen name="rates_table_padding">15dp</dimen>
+
+    <dimen name="rates_table_header">30sp</dimen>
+    <dimen name="rates_table_values">7sp</dimen>
+    <dimen name="loading_badge_elevation">100dp</dimen>
+    <dimen name="loading_badge_text_size_big">25sp</dimen>
+    <dimen name="loading_badge_internal_spacing">5dp</dimen>
+    <dimen name="loading_badge_text_size_medium">15sp</dimen>
+    <dimen name="loading_badge_progressbar_margin">15sp</dimen>
+    <dimen name="loading_badge_button_elevation">20dp</dimen>
+    <dimen name="main_header_input_text_size">35sp</dimen>
+    <dimen name="main_header_input_text_minimum_width">100dp</dimen>
+    <dimen name="rates_table_values_padding">10dp</dimen>
+    <dimen name="main_header_padding">30dp</dimen>
+</resources>
